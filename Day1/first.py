@@ -1,1 +1,11 @@
-print("Hello world!")
+print("Hello User!")
+print("Please sign up Now")
+A = input("ENTER YOUR NAME: ")
+B = input("ENTER YOUR EMAIL: ")
+C = input("ENTER YOUR NUMBER: ")
+D = input("ENTER YOUR PASSWORD: ")
+
+print("NAME:- "+ A)
+print("EMAIL:- "+ B)
+print("NUMBER:- "+ C)
+print("PASSWORD:- "+ D)
