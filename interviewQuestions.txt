@@ -1,0 +1,126 @@
+
+
+#⚔️ 1. Difference Between List and Tuple
+| Feature     | List                         | Tuple                        |
+| ----------- | ---------------------------- | ---------------------------- |
+| Syntax      | `[ ]`                        | `( )`                        |
+| Mutability  | Mutable (can change)         | Immutable (cannot change)    |
+| Methods     | Many methods                 | Only `count()` and `index()` |
+| Performance | Slightly slower              | Faster                       |
+| Memory      | More memory                  | Less memory                  |
+| Use case    | Dynamic data (changes often) | Fixed data (constant values) |
+
+#Example
+# List (mutable)
+my_list = [1, 2, 3]
+my_list[0] = 100   # ✅ allowed
+
+# Tuple (immutable)
+my_tuple = (1, 2, 3)
+my_tuple[0] = 100  # ❌ error
+
+#🔒 2. What is GIL?
+GIL (Global Interpreter Lock) is a mechanism that allows only one thread to execute Python bytecode at a time.
+
+Why it exists:
+Prevents memory corruption
+Simplifies memory management
+
+Impact:
+Multithreading is not truly parallel for CPU-bound tasks
+Works fine for I/O-bound tasks
+
+
+#🔄 3. Mutable vs Immutable Types
+Mutable (can change)
+- list, dict, set
+Immutable (cannot change)
+- int, float, string, tuple
+
+x = [1, 2]
+x[0] = 10  # ✅ mutable
+
+y = "hello"
+y[0] = 'H'  # ❌ error
+
+#📦 4. Shallow Copy vs Deep Copy
+Shallow Copy
+Copies reference of nested objects
+Deep Copy
+Copies everything recursively
+
+
+import copy
+
+a = [[1, 2], [3, 4]]
+
+b = copy.copy(a)      # shallow
+c = copy.deepcopy(a)  # deep
+
+👉 Key difference:
+
+Changing nested objects affects shallow copy, not deep copy
+
+#🎭 5. What are Decorators?
+
+A decorator is a function that modifies another function without changing its code.
+
+def my_decorator(func):
+    def wrapper():
+        print("Before")
+        func()
+        print("After")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello")
+
+
+👉 Used for:
+
+Logging
+Authentication
+Timing functions
+
+
+#🧠 6. How Memory is Managed in Python
+Uses automatic memory management
+Based on:
+Reference counting
+Garbage collection
+
+👉 Key points:
+
+Objects deleted when reference count = 0
+Garbage collector handles circular references
+
+
+#⚖️ 7. Difference Between is vs ==
+
+| Operator | Meaning                           |
+| -------- | --------------------------------- |
+| `==`     | Checks value equality             |
+| `is`     | Checks memory location (identity) |
+
+
+a = [1, 2]
+b = [1, 2]
+
+print(a == b)  # True
+print(a is b)  # False
+
+👉 Interview line:
+“== compares values, is compares identity.”
+
+#⚡ 8. What is a Generator?
+
+A generator is a function that returns values one at a time using yield, instead of returning all at once.
+
+def count_up(n):
+    for i in range(n):
+        yield i
+
+👉 Benefits:
+Memory efficient
+Lazy evaluation
