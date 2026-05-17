@@ -1,3 +1,4 @@
+# write a python function to remove a given word from a list ad  strip it at the same time, esay explanation and easy code in python 
 def remove_word(words, remove_item):
     cleaned_list = []
 
