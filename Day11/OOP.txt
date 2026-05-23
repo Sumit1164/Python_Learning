@@ -1,0 +1,22 @@
+Class - A Class is a blueprint for creating object.
+
+Object - An object is an creation of a class. when class is defined, a template(info) is defined. Memory is allocated only after object creation.
+
+| Term          | Meaning                       |
+| ------------- | ----------------------------- |
+| Class         | Blueprint/template            |
+| Object        | Real thing created from class |
+| Attribute     | Variable inside class         |
+| Method        | Function inside class         |
+| Instantiation | Creating object from class    |
+
+
+
+
+
+| Noun          | Class -> Employee             |
+| Adjective     | Attribute -> name, age, salary|
+| Verbs         | Methods -> getsalary()        |
+
+
+Class attributes - An attributes that belongs to the class rather than a practicular object. 
