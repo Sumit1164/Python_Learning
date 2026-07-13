@@ -12,7 +12,6 @@ class Complex:
         return f"{self.r} + {self.i}i"
     
 c1 = Complex(1,2)
-
 c2 = Complex(5, 7)
 
 print(c1 + c2)
